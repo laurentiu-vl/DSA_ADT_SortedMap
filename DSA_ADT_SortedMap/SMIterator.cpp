@@ -6,10 +6,15 @@ using namespace std;
 
 SMIterator::SMIterator(const SortedMap& m) : map(m){
 	//TODO - Implementation
+	
+
+
 }
 
 void SMIterator::first(){
 	//TODO - Implementation
+
+	index = 0;
 }
 
 void SMIterator::next(){

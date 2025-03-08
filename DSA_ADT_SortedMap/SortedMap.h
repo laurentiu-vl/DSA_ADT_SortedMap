@@ -13,12 +13,33 @@ typedef bool(*Relation)(TKey, TKey);
 
 class SortedMap {
 	friend class SMIterator;
+
+	
+
     private:
 		//TODO - Representation
+
+		/* ADT SortedMap – repräsentiert mithilfe eines dynamischen Arrays von Paaren der Form
+				(key, value) und sortiert mithilfe einer Relation auf den Schlüsseln (key)
+		*/
+
+		struct KeyValuePair {
+			int key;
+			int value;
+		};
+
+		KeyValuePair* array;
+		int capacity;
+		int size;
+		Relation r; //???
+
+
+
     public:
 
     // implicit constructor
     SortedMap(Relation r);
+
 
 	// adds a pair (key,value) to the map
 	//if the key already exists in the map, then the value associated to the key is replaced by the new value and the old value is returned

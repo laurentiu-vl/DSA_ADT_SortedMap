@@ -10,8 +10,23 @@ private:
 
 	//TODO - Representation
 
+	/* ADT SortedMap – repräsentiert mithilfe eines dynamischen Arrays von Paaren der Form
+				(key, value) und sortiert mithilfe einer Relation auf den Schlüsseln (key)
+		*/
+	
+	
+	//SortedMap map;
+	int index;
+	int size;
+
+	
+
+
+
+
 public:
 	void first();
+
 	void next();
 	bool valid() const;
     TElem getCurrent() const;

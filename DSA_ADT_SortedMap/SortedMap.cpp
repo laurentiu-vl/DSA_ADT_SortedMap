@@ -5,11 +5,16 @@ using namespace std;
 
 SortedMap::SortedMap(Relation r) {
 	//TODO - Implementation
+
+	array = new KeyValuePair[capacity];
 }
 
 TValue SortedMap::add(TKey k, TValue v) {
 	//TODO - Implementation
 	return NULL_TVALUE;
+
+	if (size == capacity)
+		return;
 }
 
 TValue SortedMap::search(TKey k) const {
