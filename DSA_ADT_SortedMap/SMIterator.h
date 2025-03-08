@@ -17,6 +17,7 @@ private:
 	//SortedMap map;
 	int index;
 	int size;
+	TElem* data;
 
 	
 

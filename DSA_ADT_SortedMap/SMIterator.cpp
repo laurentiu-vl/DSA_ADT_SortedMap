@@ -28,7 +28,7 @@ void SMIterator::next(){ //default
 bool SMIterator::valid() const{ //default
 	//TODO - Implementation
 
-	if (index <= size - 1) {
+	if (index <= size - 1) { //or < size
 		return true;
 
 	}
@@ -41,7 +41,9 @@ bool SMIterator::valid() const{ //default
 TElem SMIterator::getCurrent() const{ //default
 	//TODO - Implementation
 
-
+	if (valid()) {
+		return data[index];
+	}
 
 	return NULL_TPAIR;
 }

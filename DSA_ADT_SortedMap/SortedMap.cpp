@@ -12,9 +12,6 @@ SortedMap::SortedMap(Relation r) {
 TValue SortedMap::add(TKey k, TValue v) {
 	//TODO - Implementation
 	return NULL_TVALUE;
-
-	if (size == capacity)
-		return;
 }
 
 TValue SortedMap::search(TKey k) const {
