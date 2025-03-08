@@ -31,7 +31,7 @@ class SortedMap {
 		KeyValuePair* array;
 		int capacity;
 		int size;
-		Relation r; //???
+		Relation relation; //???
 
 
 

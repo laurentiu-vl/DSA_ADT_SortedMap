@@ -14,7 +14,6 @@ private:
 				(key, value) und sortiert mithilfe einer Relation auf den Schlüsseln (key)
 		*/
 	
-	
 	//SortedMap map;
 	int index;
 	int size;
@@ -25,8 +24,8 @@ private:
 
 
 public:
-	void first();
 
+	void first();
 	void next();
 	bool valid() const;
     TElem getCurrent() const;
