@@ -6,7 +6,7 @@ using namespace std;
 SortedMap::SortedMap(Relation r) {
 	//TODO - Implementation
 
-	array = new KeyValuePair[capacity];
+	array = new TElem[capacity];
 }
 
 TValue SortedMap::add(TKey k, TValue v) {

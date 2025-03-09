@@ -14,7 +14,10 @@ typedef bool(*Relation)(TKey, TKey);
 class SortedMap {
 	friend class SMIterator;
 
-	
+	//struct KeyValuePair { //struct
+	//	int key;
+	//	int value;
+	//};
 
     private:
 		//TODO - Representation
@@ -23,15 +26,11 @@ class SortedMap {
 				(key, value) und sortiert mithilfe einer Relation auf den Schlüsseln (key)
 		*/
 
-		struct KeyValuePair {
-			int key;
-			int value;
-		};
-
-		KeyValuePair* array;
+		TElem* array;
 		int capacity;
-		int size;
+		int sizeOf;
 		Relation relation; //???
+		//bool ascending;
 
 
 
@@ -39,6 +38,7 @@ class SortedMap {
 
     // implicit constructor
     SortedMap(Relation r);
+
 
 
 	// adds a pair (key,value) to the map
