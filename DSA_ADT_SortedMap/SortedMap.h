@@ -27,19 +27,17 @@ class SortedMap {
 		*/
 
 		TElem* array;
+
 		int capacity;
 		int sizeOf;
-		Relation relation; //???
-		//bool ascending;
+		bool ascending;
 
-
+		void resize(); //TODO
 
     public:
 
     // implicit constructor
     SortedMap(Relation r);
-
-
 
 	// adds a pair (key,value) to the map
 	//if the key already exists in the map, then the value associated to the key is replaced by the new value and the old value is returned
@@ -65,4 +63,5 @@ class SortedMap {
 
     // destructor
     ~SortedMap();
+
 };

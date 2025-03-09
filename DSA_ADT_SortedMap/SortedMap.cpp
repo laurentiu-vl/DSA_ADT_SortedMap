@@ -3,14 +3,47 @@
 #include <exception>
 using namespace std;
 
+static bool increasing(TKey c1, TKey c2) {
+	if (c1 <= c2) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+static bool decreasing(TKey c1, TKey c2) {
+	if (c1 >= c2) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 SortedMap::SortedMap(Relation r) {
 	//TODO - Implementation
 
+	capacity = 8;
 	array = new TElem[capacity];
+	ascending = r;
+	sizeOf = 0;
+
 }
 
 TValue SortedMap::add(TKey k, TValue v) {
 	//TODO - Implementation
+
+	if (sizeOf == capacity) {
+		resize();
+	}
+
+	if (sizeOf == 0) {
+		array[0] = TElem(k, v);
+		
+	}
+
+
 	return NULL_TVALUE;
 }
 
@@ -41,3 +74,4 @@ SMIterator SortedMap::iterator() const {
 SortedMap::~SortedMap() {
 	//TODO - Implementation
 }
+
